@@ -1,5 +1,5 @@
 {
-  "name": "mdast-util-gfm-autolink-literal",
+  "name": "mdast-util-gfm-autolink-literal-lemmy",
   "version": "2.0.0",
   "description": "mdast extension to parse and serialize GFM autolink literals",
   "license": "MIT",

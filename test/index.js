@@ -7,7 +7,7 @@ import {fromMarkdown} from 'mdast-util-from-markdown'
 import {
   gfmAutolinkLiteralFromMarkdown,
   gfmAutolinkLiteralToMarkdown
-} from 'mdast-util-gfm-autolink-literal'
+} from 'mdast-util-gfm-autolink-literal-lemmy'
 import {toMarkdown} from 'mdast-util-to-markdown'
 import {gfmAutolinkLiteral} from 'micromark-extension-gfm-autolink-literal'
 
