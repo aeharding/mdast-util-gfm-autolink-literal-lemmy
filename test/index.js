@@ -14,7 +14,7 @@ import {gfmAutolinkLiteral} from 'micromark-extension-gfm-autolink-literal'
 test('core', async function (t) {
   await t.test('should expose the public api', async function () {
     assert.deepEqual(
-      Object.keys(await import('mdast-util-gfm-autolink-literal')).sort(),
+      Object.keys(await import('mdast-util-gfm-autolink-literal-lemmy')).sort(),
       ['gfmAutolinkLiteralFromMarkdown', 'gfmAutolinkLiteralToMarkdown']
     )
   })
