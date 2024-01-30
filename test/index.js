@@ -27,7 +27,9 @@ test('gfmAutolinkLiteralFromMarkdown()', async function (t) {
         'www.example.com, https://example.com, and contact@example.com.',
         {
           extensions: [gfmAutolinkLiteral()],
-          mdastExtensions: [gfmAutolinkLiteralFromMarkdown()]
+          mdastExtensions: [
+            gfmAutolinkLiteralFromMarkdown({connectedInstance: 'lemmy.world'})
+          ]
         }
       ),
       {
@@ -136,7 +138,9 @@ test('gfmAutolinkLiteralFromMarkdown()', async function (t) {
     assert.deepEqual(
       fromMarkdown('[https://google.com](https://google.com)', {
         extensions: [gfmAutolinkLiteral()],
-        mdastExtensions: [gfmAutolinkLiteralFromMarkdown()]
+        mdastExtensions: [
+          gfmAutolinkLiteralFromMarkdown({connectedInstance: 'lemmy.world'})
+        ]
       }),
       {
         type: 'root',
@@ -474,7 +478,9 @@ test('fixtures', async function (t) {
 
       const mdast = fromMarkdown(input, {
         extensions: [gfmAutolinkLiteral()],
-        mdastExtensions: [gfmAutolinkLiteralFromMarkdown()]
+        mdastExtensions: [
+          gfmAutolinkLiteralFromMarkdown({connectedInstance: 'lemmy.world'})
+        ]
       })
 
       const hast = toHast(mdast, {allowDangerousHtml: true})
